@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnTry").click(function () {
+                // 在這裏寫程式
+                //alert($("#report").css("font-size"));
+
+
+                // $("#report")
+                // .css("font-size","2em")
+                // .css("font-style","italic");                
+                // $("#report").css({
+                //   "font-size": "2em",
+                //   "font-style": "italic"
+                // });
+                
+                $("#betaRibbon")
+                .toggleClass("beta-ribbon")   // addClass套用類別  toggleClass切換類別  removeClass刪除類別
+                .css({
+                  "font-family":"Arial",
+                  "font-size": "2em"
+                });  
+                
+                
+            })
+        });
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+<div class="beta-ribbon-wrapper">
+  <div id="betaRibbon">
+    <a href="/about/#beta">Beta</a>
+  </div>
+</div>
+
+<div id="report">Report:<br></div>
+<hr>
+<form action="" method="put" onsubmit="return false;">
+  <button type="button" id="btnTry">Try</button>
+</form>
+</body>
+</html>
